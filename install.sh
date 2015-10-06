@@ -1,26 +1,27 @@
 #!/bin/bash
-# Install this profile into the $HOME directory.
-workdir=$(dirname "$(readlink -e "$0")")
+# Install into the $HOME directory.
+DIR=$(dirname "$(readlink -e "$0")")
+IGNORE=( -I . -I .. -I doc -I .git -I .gitignore -I .gitconfig -I install.sh )
 case $1 in
     f|full)
         echo "Installing full version..."
-        ls --color=none -a -I . -I .. -I doc -I .git -I .gitignore -I .gitconfig -I install.sh $workdir | xargs -i cp -r $workdir/{} $HOME
+        ls --color=none -a ${IGNORE[*]} $DIR | xargs -i cp -r $DIR/{} $HOME
         ;;
     g|git)
         cp .gitconfig $HOME
         ;;
-    m|min|minimal)
+    m|min)
         echo "Installing minimal version..."
-        cp -r $workdir/.bash_functions/ $HOME
-        cp -r $workdir/.fonts/ $HOME
-        cp $workdir/.bash_logout $HOME
-        cp $workdir/.bash_profile $HOME
-        cp $workdir/.bashrc $HOME
-        cp $workdir/.inputrc $HOME
-        cp $workdir/.vimrc $HOME
+        cp -r $DIR/bin $HOME
+        cp -r $DIR/.fonts $HOME
+        cp $DIR/.bash_logout $HOME
+        cp $DIR/.bash_profile $HOME
+        cp $DIR/.bashrc $HOME
+        cp $DIR/.inputrc $HOME
+        cp $DIR/.vimrc $HOME
         ;;
     *)
-        echo "Argument missing. Specify m(in(inmal) or f(ull) version."
+        echo "Argument missing. Specify m(in) or f(ull) or just g(it) version."
         ;;
 esac
 
