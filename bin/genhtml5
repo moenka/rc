@@ -1,0 +1,32 @@
+#!/bin/bash
+echo -n "create new html5_template.html file? Press ^[ + c to cancel."
+read
+
+cat << EOF > html5_template.html
+<!doctype html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+
+    <title></title>
+    <meta name="description" content="">
+    <meta name="author" content="caezs">
+
+    <link rel="stylesheet" href="css/theme.css">
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+
+<body>
+    <script src="js/script.js"></script>
+</body>
+
+
+</html>
+EOF
+

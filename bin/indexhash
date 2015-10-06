@@ -1,0 +1,14 @@
+# Generate a hash over an index of a directory.
+# Usage: indexhash <dir>
+if [ ! $1 ]; then
+    echo -n "Usage: indexhash <dir>"
+    kill -INT $$
+fi
+ls $1 &> /dev/null
+if [ $? != 0 ]; then
+    echo -n "$1 is not a directory or missing read permission."
+    kill -INT $$
+fi
+find $1 -type f | sed s,${1%/}/,, > /tmp/indexhash
+sha512sum /tmp/indexhash | cut -d" " -f1
+

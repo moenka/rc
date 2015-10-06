@@ -1,0 +1,14 @@
+# Overwrite the /etc/motd of the system with the hostname and a string from stdin
+# Usage: genmotd <string>
+if [[ ! $1 ]]; then
+    echo -n "Usage: genmotd <string>"
+    kill -INT $$
+fi  
+sudo bash -c "echo -e \"\e[0;33m\n>>> $(hostname -f)\n>>> ${1}\n\e[0m\" > /etc/motd"
+if [ -r "/etc/update-motd.d/10-help-text" ]; then
+    sudo chmod -x /etc/update-motd.d/10-help-text
+    sudo bash -c "echo -e \"\e[0;33m\n>>> $(hostname -f)\n>>> ${1}\n\e[0m\" > /etc/update-motd.d/10-simple-motd"
+    sudo chmod +x /etc/update-motd.d/10-simple-motd
+fi  
+cat /etc/motd
+

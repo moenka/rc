@@ -1,0 +1,6 @@
+# Start the  built-in php server.
+# Usage: webphp [int port]
+local port=$1
+[ "$port" == "" ] && port=8000
+php -S 0.0.0.0:$port -t .
+
