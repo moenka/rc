@@ -1,0 +1,8 @@
+#!/bin/bash
+# Get the help message of an application and display it as scrollable file.
+if [ ! $1 ]; then
+    echo -n "Usage: helpme <application>"
+    kill -INT $$
+fi
+$1 --help | less
+
