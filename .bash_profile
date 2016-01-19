@@ -1,4 +1,4 @@
-export PATH=$HOME/.bash/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin
+export PATH=$HOME/.bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin
 
 [[ -f "${HOME}/.bashrc" ]] && source "${HOME}/.bashrc"
 [[ -d "${HOME}/bin" ]] && PATH="${HOME}/bin:${PATH}"
