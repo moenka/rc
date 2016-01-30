@@ -1,7 +1,7 @@
 export PATH=$HOME/.bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin
 
 [[ -f "${HOME}/.bashrc" ]] && source "${HOME}/.bashrc"
-[[ -d "${HOME}/bin" ]] && PATH="${HOME}/bin:${PATH}"
+[[ -d "${HOME}/.bin" ]] && PATH="${HOME}/.bin:${PATH}"
 [[ -d "${HOME}/.rvm/bin" ]] && PATH="${PATH}:${HOME}/.rvm/bin"
 [[ -s "${HOME}/.rvm/scripts/rvm" ]] && source "${HOME}/.rvm/scripts/rvm"
 [[ -f "/etc/bash_completion" ]] && source /etc/bash_completion
