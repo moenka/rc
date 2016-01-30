@@ -26,4 +26,5 @@ colorscheme desert
 
 " File detection
 au BufEnter,BufRead *.conf setf dosini
+au BufENter,BufRead *.sls setlocal sw=2 sts=2
 
