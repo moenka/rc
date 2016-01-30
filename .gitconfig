@@ -1,0 +1,5 @@
+[user]
+	name = monk
+	email = monk@10forge.org
+[push]
+	default = simple
