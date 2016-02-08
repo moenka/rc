@@ -1,0 +1,25 @@
+#!/bin/bash
+# Create a local copy of a website.
+if [ ! $1 ]; then
+    echo -n "Usage: getwebsite <url>"
+    kill -INT $$
+fi
+
+URL=$1
+DOMAIN=$(echo ${URL} | awk -F/ '{print $3}')
+
+echo -e "Url: ${URL}"
+echo -e "Domain: ${DOMAIN}"
+
+wget \
+    --recursive \
+    --no-clobber \
+    --page-requisites \
+    --html-extension \
+    --convert-links \
+    --restrict-file-names=windows \
+    --domains ${DOMAIN} \
+    --no-parent \
+    --quiet \
+    $URL
+
