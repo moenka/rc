@@ -2,9 +2,9 @@
 
 ## Prompt
 if [[ `whoami` == 'root' ]]; then
-    export PS1="\[$(tput sgr0)$(tput setaf 1)\] « \h » \[$(tput sgr0)\]"
+    export PS1="\[$(tput sgr0)$(tput setaf 1)\] « \h \w » \[$(tput sgr0)\]"
 else
-    export PS1=" « \h » "
+    export PS1=" « \h \w » "
 fi
 
 ## Colorization
