@@ -1,0 +1,14 @@
+#!/bin/bash
+#
+#   Create an iteratable list of virtual container id's on the host system.
+#
+
+if [ -x /usr/sbin/pct ]; then
+    /usr/sbin/pct list | tail -n +2 | awk '{print $1}'
+elif [ -x /usr/sbin/vzlist ]; then
+    /usr/sbin/vzlist | tail -n +2 | cut -f1 -d" "
+else
+    >&2 echo -e "No tool for virtual containers found."
+    exit 1
+fi
+
