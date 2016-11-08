@@ -55,6 +55,7 @@ shopt -s histappend
 
 ## Aliases
 alias ..='cd ..'
+alias autoremove='apt-get autoremove --purge'
 alias dus="du -hd1 | sort -h"
 alias ff='firefox > /dev/null 2>&1 &'
 alias fh='firefox -no-remote -P "private" > /dev/null 2>&1 &'
@@ -66,6 +67,7 @@ alias ll='ls -lh --group-directories-first'
 alias m='mount | grep -vE "(proc|sys|cgroup)" | column -t'
 alias ns='netstat -tunlap'
 alias nossh="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
+alias purge='apt-get purge'
 alias sdx="ll /dev | grep sd"
 alias ss='sudo -E -s'
 alias webpy="python -m SimpleHTTPServer"
