@@ -1,0 +1,51 @@
+#!/bin/bash
+
+
+function command_of {
+    local LOCAL_PKG=$(dpkg -l $1 | tail -n1 | awk '{print $3}')
+    local REMOTE_PKG=$(apt-cache show $1 | grep --color=never Version | awk '{print $2}' | head -n1)
+    case "$2" in
+    available)
+        >&2 echo "available versions:"
+        apt-cache show $1 | grep --color=never Version | awk '{print $2}'
+        ;;
+    local)
+        >&2 echo -n "local version: "
+        echo "$LOCAL_PKG"
+        ;;
+    *)
+        echo -n "local "
+        echo -n $LOCAL_PKG
+        if [ "$LOCAL_PKG" == "$REMOTE_PKG" ]; then
+            echo -n " ===  "
+        else
+            echo -n " =/= "
+        fi
+        echo -n $REMOTE_PKG
+        echo " latest"
+        ;;
+    esac
+}
+
+
+function print_usage {
+    echo "version of <package name> [<available|local>]"
+}
+
+
+function run {
+    case "$1" in
+    of)
+        shift
+        command_of $@
+        ;;
+    *)
+        print_usage
+        exit 1
+        ;;
+    esac
+}
+
+
+[[ $_ == $0 ]] && run $@
+
