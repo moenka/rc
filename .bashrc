@@ -1,4 +1,3 @@
-set -x
 
 [ -z "$PS1" ] && return; umask 022
 
@@ -60,6 +59,7 @@ shopt -s histappend
 ## Aliases
 alias ..='cd ..'
 alias autoremove='apt-get autoremove --purge'
+alias battery='upower -i $(upower -e | grep BAT)'
 alias dus="du -hd1 | sort -h"
 alias ff='firefox > /dev/null 2>&1 &'
 alias fh='firefox -no-remote -P "private" > /dev/null 2>&1 &'
