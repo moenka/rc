@@ -1,13 +1,19 @@
 
 [ -z "$PS1" ] && return; umask 022
 
+__git_ps1 () 
+{
+    local b="$(git symbolic-ref HEAD 2>/dev/null)";
+    if [ -n "$b" ]; then
+        printf "(%s) " "${b##refs/heads/}";
+    fi
+}
+
 ## Prompt
-export GITAWAREPROMPT=$HOME/.gitprompt
-[[ -r "${GITAWAREPROMPT}/main.sh" ]] && source "${GITAWAREPROMPT}/main.sh"
 if [[ `whoami` == 'root' ]]; then
-    export PS1="\[$(tput sgr0)$(tput setaf 1)\] \h \w\$git_branch\$git_dirty » \[$(tput sgr0)\]"
+    export PS1="\[$(tput sgr0)$(tput setaf 1)\] \h \w\$(__git_ps1) » \[$(tput sgr0)\]"
 else
-    export PS1=" \h \w\$git_branch\$git_dirty » "
+    export PS1=" \h \w\$(__git_ps1) » "
 fi
 
 ## Colorization
