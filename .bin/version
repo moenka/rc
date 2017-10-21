@@ -14,15 +14,10 @@ function command_of {
         echo "$LOCAL_PKG"
         ;;
     *)
-        echo -n "local "
-        echo -n $LOCAL_PKG
-        if [ "$LOCAL_PKG" == "$REMOTE_PKG" ]; then
-            echo -n " ===  "
-        else
-            echo -n " =/= "
-        fi
-        echo -n $REMOTE_PKG
-        echo " latest"
+        echo -n "local : "
+        echo $LOCAL_PKG
+        echo -n "latest: "
+        echo $REMOTE_PKG
         ;;
     esac
 }
