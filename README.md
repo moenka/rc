@@ -1,6 +1,6 @@
 # rc
 
-> shell config, cause customization can
+Custom shell configuration for bash.
 
 ## Installation
 
