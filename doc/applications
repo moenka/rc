@@ -1,0 +1,35 @@
+---
+debian:
+- gimp
+- nmap
+- net-tools
+- virtualbox
+- htop
+- signal-desktop
+- apache2-utils
+- curl
+- chromium-browser
+- python-pip
+- network-manager-openvpn-gnome
+- git
+- docker-ce
+- apt-transport-https
+- software-properties-common
+- openjdk-8-jdk
+- spotify-client
+- terminator
+- tig
+- atom
+- iotop
+- jq
+- ldap-utils
+- mosh
+- nfs-common
+- nodejs
+- pwgen
+- skypeforlinux
+- slack-desktop
+- smartmontools
+- strace
+- tree
+
