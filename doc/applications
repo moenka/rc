@@ -1,35 +1,39 @@
 ---
-debian:
-- gimp
-- nmap
-- net-tools
-- virtualbox
-- htop
-- signal-desktop
-- apache2-utils
-- curl
-- chromium-browser
-- python-pip
-- network-manager-openvpn-gnome
-- git
-- docker-ce
-- apt-transport-https
-- software-properties-common
-- openjdk-8-jdk
-- spotify-client
-- terminator
-- tig
-- atom
-- iotop
-- jq
-- ldap-utils
-- mosh
-- nfs-common
-- nodejs
-- pwgen
-- skypeforlinux
-- slack-desktop
-- smartmontools
-- strace
-- tree
-
+apt:
+  - apache2-utils
+  - apt-transport-https
+  - atom
+  - chromium-browser
+  - curl
+  - docker-ce
+  - gimp
+  - git
+  - htop
+  - iotop
+  - jq
+  - ldap-utils
+  - mosh
+  - net-tools
+  - network-manager-openvpn-gnome
+  - nfs-common
+  - nmap
+  - nodejs
+  - openjdk-8-jdk
+  - pwgen
+  - python-pip
+  - signal-desktop
+  - skypeforlinux
+  - slack-desktop
+  - smartmontools
+  - software-properties-common
+  - spotify-client
+  - strace
+  - terminator
+  - tig
+  - tree
+  - utftools
+pip:
+  - ansible
+setup:
+  - vagrant
+  - virtualbox
