@@ -1,7 +1,7 @@
 
 [ -z "$PS1" ] && return; umask 022
 
-__git_ps1 () 
+__git_ps1 ()
 {
     local b="$(git symbolic-ref HEAD 2>/dev/null)";
     if [ -n "$b" ]; then
@@ -88,12 +88,6 @@ export HISTCONTROL=ignoreboth
 export HISTSIZE=10000
 export HISTFILESIZE=$HISTSIZE
 export INPUTRC=$HOME/.inputrc
-export PATH=$PATH:$HOME/Forge/go/bin
-
-# Imports
-[[ -f "/etc/bash_completion" ]] && source /etc/bash_completion
-[[ -r "${HOME}/.bash_local" ]] && source "${HOME}/.bash_local"
 
 # Worship the dot . Within lies beauty and ease .
 # Let functions become CRUD and find ZEN .
-
