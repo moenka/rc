@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/etc/lightdm/lightdm.conf.d'
+let g:netrw_dirhist_2='/srv/docker/ldap/config/cn=config/olcDatabase={2}bdb'
+let g:netrw_dirhist_3='/srv/docker/ldap/config/cn=config/cn=schema'
+let g:netrw_dirhist_4='/home/tsteinert/Laboratory/ansible/conversis_v2/playbooks'
+let g:netrw_dirhist_5='/home/tsteinert/.tipboard/custom_tiles'
+let g:netrw_dirhist_6='/home/tsteinert/conversis/git/conversis/dashbuilder/dashbuild'

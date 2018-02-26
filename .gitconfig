@@ -1,5 +1,7 @@
 [user]
-	name = m-o-n-k
-	email = monk@10forge.org
+	name = moenka
+	email = moenka@10forge.org
 [push]
 	default = simple
+[diff]
+	tool = vimdiff
