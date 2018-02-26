@@ -27,6 +27,7 @@ apt:
   - smartmontools
   - software-properties-common
   - spotify-client
+  - sshpass
   - strace
   - terminator
   - tig

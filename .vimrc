@@ -22,7 +22,7 @@ set tabstop=4
 
 " Colorscheme
 syntax enable
-colorscheme desert
+colorscheme apprentice
 
 " File detection
 au BufEnter,BufRead *.conf setf dosini
