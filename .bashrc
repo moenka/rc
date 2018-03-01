@@ -73,8 +73,9 @@ alias la='ls -lah --group-directories-first'
 alias ll='ls -lh --group-directories-first'
 alias m='mount | grep -vE "(proc|sys|cgroup)" | column -t'
 alias nossh="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
-alias sdx="ll /dev | grep sd"
-alias ss='sudo -E -s'
+alias sd="ll /dev | grep sd"
+alias so='sudo -E -s'
+alias ss='ss -tunlap | column -t'
 alias webpy="python -m SimpleHTTPServer"
 
 ## Custom env
