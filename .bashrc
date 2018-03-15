@@ -65,18 +65,19 @@ shopt -s histappend
 ## Aliases
 alias ..='cd ..'
 alias battery='upower -i $(upower -e | grep BAT)'
-alias dus="du -hd1 | sort -h"
+alias diff='diff -W $(($COLUMNS - 2 ))'
+alias dus='du -hd1 | sort -h'
 alias ff='firefox > /dev/null 2>&1 &'
 alias fh='firefox -no-remote -P "private" > /dev/null 2>&1 &'
 alias git='LANGUAGE=en_US.UTF-8 git'
 alias la='ls -lah --group-directories-first'
 alias ll='ls -lh --group-directories-first'
 alias m='mount | grep -vE "(proc|sys|cgroup)" | column -t'
-alias nossh="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
-alias sd="ll /dev | grep sd"
+alias nossh='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
+alias sd='ll /dev | grep sd'
 alias so='sudo -E -s'
 alias ss='ss -tulpn | column -t'
-alias webpy="python -m SimpleHTTPServer"
+alias webpy='python -m SimpleHTTPServer'
 
 ## Custom env
 export EDITOR=vim
