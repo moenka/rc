@@ -11,9 +11,9 @@ __git_ps1 ()
 
 ## Prompt
 if [[ `whoami` == 'root' ]]; then
-    export PS1="\[$(tput sgr0)$(tput setaf 1)\] \t \h \W\$(__git_ps1) » \[$(tput sgr0)\]"
+    export PS1="\[$(tput sgr0)$(tput setaf 1)\] \t \h \W\[\$(__git_ps1)\] » \[$(tput sgr0)\]"
 else
-    export PS1=" \t \h \W\$(__git_ps1) » "
+    export PS1=" \t \h \W\[\$(__git_ps1)\] » "
 fi
 
 ## Colorization
