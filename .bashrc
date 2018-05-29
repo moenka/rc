@@ -86,6 +86,8 @@ export HISTCONTROL=ignoreboth
 export HISTSIZE=10000
 export HISTFILESIZE=$HISTSIZE
 export INPUTRC=$HOME/.inputrc
+export PYENV_ROOT="$HOME/.pyenv"
 
 # Worship the dot . Within lies beauty and ease .
 # Let functions become CRUD and find ZEN .NGUAGE=en_US.UTF-8
+
