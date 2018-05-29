@@ -31,14 +31,14 @@ urldecode() {
     printf '%b' "${url_encoded//%/\\x}"
 }
 
-add_path_if_exist "${HOME}/.bin"
-add_path_if_exist "${HOME}/.pyenv/bin"
-add_path_if_exist "${HOME}/.linuxbrew/bin"
 load_file_if_exist "${HOME}/.bashrc"
 load_file_if_exist "${HOME}/.bash_local"
 load_file_if_exist "${HOME}/.rvm/scripts/rvm"
 load_file_if_exist "/etc/bash_completion"
 load_file_if_exist "/etc/profile.d/bash_completion.sh"
+add_path_if_exist "${HOME}/.bin"
+add_path_if_exist "${PYENV_ROOT}/bin"
+add_path_if_exist "${HOME}/.linuxbrew/bin"
 
 if [[ $(which pyenv &>/dev/null) ]]; then
     eval "$(pyenv init -)"
