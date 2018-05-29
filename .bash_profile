@@ -40,7 +40,7 @@ add_path_if_exist "${HOME}/.bin"
 add_path_if_exist "${PYENV_ROOT}/bin"
 add_path_if_exist "${HOME}/.linuxbrew/bin"
 
-if [[ $(which pyenv &>/dev/null) ]]; then
+if $(command -v pyenv &>/dev/null); then
     eval "$(pyenv init -)"
 fi
 
