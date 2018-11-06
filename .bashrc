@@ -10,11 +10,7 @@ __git_ps1 ()
 }
 
 ## Prompt
-if [[ `whoami` == 'root' ]]; then
-    export PS1="\[$(tput sgr0)$(tput setaf 1)\] \t \h \W\$(__git_ps1) » \[$(tput sgr0)\]"
-else
-    export PS1=" \t \h \W\$(__git_ps1) » "
-fi
+PS1='${debian_chroot:+($debian_chroot)}\u@\h:\W\$ '
 
 ## Colorization
 alias ls='ls --color=auto -CF'
