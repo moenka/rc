@@ -26,7 +26,6 @@ urlencode() {
 
 urldecode() {
     # urldecode <string>
-
     local url_encoded="${1//+/ }"
     printf '%b' "${url_encoded//%/\\x}"
 }
@@ -40,7 +39,11 @@ add_path_if_exist "${HOME}/.bin"
 add_path_if_exist "${PYENV_ROOT}/bin"
 add_path_if_exist "${HOME}/.linuxbrew/bin"
 
+# pyenv initialization
 if $(command -v pyenv &>/dev/null); then
     eval "$(pyenv init -)"
 fi
+
+# gopass completion
+which gopass &>/dev/null && source <(gopass completion bash)
 
