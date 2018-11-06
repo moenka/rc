@@ -81,6 +81,7 @@ export EDITOR=vim
 export HISTCONTROL=ignoreboth
 export HISTSIZE=10000
 export HISTFILESIZE=$HISTSIZE
+export HISTTIMEFORMAT='%d/%m/%y %T '
 export INPUTRC=$HOME/.inputrc
 export PYENV_ROOT="$HOME/.pyenv"
 
