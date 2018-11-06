@@ -1,7 +1,6 @@
 [user]
 	name = moenka
 	email = moenka@10forge.org
->>>>>>> git_diff
 [push]
 	default = simple
 [diff]
