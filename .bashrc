@@ -84,3 +84,6 @@ export HISTTIMEFORMAT='%d/%m/%y %T '
 export INPUTRC=$HOME/.inputrc
 export PYENV_ROOT="$HOME/.pyenv"
 
+# Push line to bottom
+clear
+tput cup $LINES 0
