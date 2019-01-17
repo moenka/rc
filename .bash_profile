@@ -1,6 +1,6 @@
 
 add_path_if_exist() {
-  [[ -d "$1" ]] && PATH="$1:${PATH}"
+  [[ -d "$1" ]] && PATH="${PATH}:$1"
 }
 
 load_file_if_exist() {
