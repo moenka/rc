@@ -12,5 +12,3 @@ set completion-ignore-case on
 "\e\e[C": forward-word
 "\e\e[D": backward-word
 
-*keysym.Control-l: "clear; tput cup $LINES 0\n"
-
