@@ -36,6 +36,7 @@ load_file_if_exist "${HOME}/.rvm/scripts/rvm"
 load_file_if_exist "/etc/bash_completion"
 load_file_if_exist "/etc/profile.d/bash_completion.sh"
 add_path_if_exist "${HOME}/.bin"
+add_path_if_exist "${HOME}/.local/bin"
 add_path_if_exist "${PYENV_ROOT}/bin"
 add_path_if_exist "${HOME}/.linuxbrew/bin"
 
